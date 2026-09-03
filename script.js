@@ -1,115 +1,205 @@
-// Menu burguer
-function toggleMenu() {
-    document.querySelector(".menu").classList.toggle("ativo");
-}
+(() => {
+    "use strict";
 
-//Linha do tempo
-document.addEventListener("DOMContentLoaded", function () {
-    // Animação da linha do tempo
-    const events = document.querySelectorAll(".event");
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    function checkScroll() {
-        const triggerBottom = window.innerHeight * 0.9;
+    function initNavigation() {
+        const toggle = document.querySelector(".nav-toggle");
+        const nav = document.querySelector(".site-nav");
+        const closeButton = document.querySelector(".drawer-close");
+        const backdrop = document.querySelector("[data-nav-backdrop]");
+        if (!toggle || !nav) return;
 
-        events.forEach(event => {
-            const eventTop = event.getBoundingClientRect().top;
-            if (eventTop < triggerBottom && event.style.opacity !== "1") {
-                event.style.opacity = "1";
-                event.style.transform = "translateX(0)";
+        const setOpen = (open) => {
+            const isMobile = window.innerWidth <= 900;
+            const shouldOpen = isMobile && open;
+            document.body.classList.toggle("is-nav-open", shouldOpen);
+            toggle.setAttribute("aria-expanded", String(shouldOpen));
+            toggle.setAttribute("aria-label", shouldOpen ? "Fechar menu" : "Abrir menu");
+            backdrop?.setAttribute("aria-hidden", String(!shouldOpen));
+            nav.inert = isMobile && !shouldOpen;
+            if (isMobile) nav.setAttribute("aria-hidden", String(!shouldOpen));
+            else nav.removeAttribute("aria-hidden");
+            if (shouldOpen) {
+                const active = nav.querySelector('[aria-current="page"]') || nav.querySelector("a");
+                window.setTimeout(() => active?.focus({ preventScroll: true }), reduceMotion ? 0 : 180);
+            }
+        };
+
+        toggle.addEventListener("click", () => setOpen(!document.body.classList.contains("is-nav-open")));
+        closeButton?.addEventListener("click", () => { setOpen(false); toggle.focus(); });
+        backdrop?.addEventListener("click", () => setOpen(false));
+        nav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => setOpen(false)));
+        document.addEventListener("keydown", (event) => {
+            if (!document.body.classList.contains("is-nav-open")) return;
+            if (event.key === "Escape") {
+                setOpen(false);
+                toggle.focus();
+                return;
+            }
+            if (event.key === "Tab") {
+                const focusables = [...nav.querySelectorAll('a[href], button:not([disabled])')].filter(el => !el.hidden);
+                if (!focusables.length) return;
+                const first = focusables[0];
+                const last = focusables[focusables.length - 1];
+                if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+                else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
             }
         });
+        window.addEventListener("resize", () => setOpen(false), { passive: true });
+        setOpen(false);
+    }
 
-        if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 50) {
-            events.forEach(event => {
-                event.style.opacity = "1";
-                event.style.transform = "translateX(0)";
-            });
+    function initTimeline() {
+        const items = [...document.querySelectorAll("[data-timeline-item]")];
+        if (!items.length) return;
+        if (reduceMotion || !("IntersectionObserver" in window)) {
+            items.forEach(item => item.classList.add("is-visible"));
+            return;
         }
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { rootMargin: "0px 0px -10% 0px", threshold: 0.08 });
+        items.forEach(item => observer.observe(item));
     }
 
-    window.addEventListener("scroll", checkScroll);
-    checkScroll();
-});
-
-// Botão de voltar ao topo
-document.addEventListener("DOMContentLoaded", function() {
-    const botao = document.getElementById("voltarTopo");
-
-    function toggleButton() {
-        botao.style.display = window.scrollY > 200 ? "block" : "none";
+    function initBackToTop() {
+        const button = document.getElementById("voltarTopo");
+        if (!button) return;
+        let ticking = false;
+        const update = () => {
+            button.classList.toggle("is-visible", window.scrollY > 420);
+            ticking = false;
+        };
+        window.addEventListener("scroll", () => {
+            if (!ticking) {
+                window.requestAnimationFrame(update);
+                ticking = true;
+            }
+        }, { passive: true });
+        button.addEventListener("click", () => window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" }));
+        update();
     }
 
-    window.addEventListener("scroll", toggleButton);
+    function initGallery() {
+        const items = [...document.querySelectorAll("[data-gallery-item]")];
+        const lightbox = document.querySelector("[data-lightbox]");
+        const image = lightbox?.querySelector("[data-lightbox-image]");
+        const caption = lightbox?.querySelector("[data-lightbox-caption]");
+        const close = lightbox?.querySelector(".lightbox-close");
+        const prev = lightbox?.querySelector(".lightbox-prev");
+        const next = lightbox?.querySelector(".lightbox-next");
+        if (!items.length || !lightbox || !image) return;
 
-    botao.addEventListener("click", function() {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    });
+        let index = 0;
+        let lastFocus = null;
+        let touchStartX = null;
 
-    toggleButton();
-});
+        const render = () => {
+            const item = items[index];
+            const thumb = item.querySelector("img");
+            image.src = item.dataset.full;
+            image.alt = thumb?.alt || "Registro ampliado da trajetória escoteira";
+            if (caption) caption.textContent = `Foto ${index + 1} de ${items.length}`;
+        };
+        const open = (newIndex, trigger) => {
+            index = newIndex;
+            lastFocus = trigger;
+            render();
+            lightbox.hidden = false;
+            document.body.classList.add("is-lightbox-open");
+            close?.focus({ preventScroll: true });
+        };
+        const closeBox = () => {
+            lightbox.hidden = true;
+            document.body.classList.remove("is-lightbox-open");
+            image.src = "";
+            lastFocus?.focus({ preventScroll: true });
+        };
+        const move = delta => { index = (index + delta + items.length) % items.length; render(); };
 
-// Forms
-document.addEventListener("DOMContentLoaded", function() {
-    // Verifique se o botão de dropdown existe na página
-    const dropdownBtn = document.querySelector('.dropdown-btn');
+        items.forEach((item, i) => item.addEventListener("click", () => open(i, item)));
+        close?.addEventListener("click", closeBox);
+        prev?.addEventListener("click", () => move(-1));
+        next?.addEventListener("click", () => move(1));
+        lightbox.addEventListener("click", event => { if (event.target === lightbox) closeBox(); });
+        document.addEventListener("keydown", event => {
+            if (lightbox.hidden) return;
+            if (event.key === "Escape") { closeBox(); return; }
+            if (event.key === "ArrowLeft") { move(-1); return; }
+            if (event.key === "ArrowRight") { move(1); return; }
+            if (event.key === "Tab") {
+                const focusables = [...lightbox.querySelectorAll('button:not([disabled])')];
+                const first = focusables[0];
+                const last = focusables[focusables.length - 1];
+                if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+                else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+            }
+        });
+        lightbox.addEventListener("touchstart", e => { touchStartX = e.changedTouches[0]?.clientX ?? null; }, { passive: true });
+        lightbox.addEventListener("touchend", e => {
+            if (touchStartX === null) return;
+            const delta = (e.changedTouches[0]?.clientX ?? touchStartX) - touchStartX;
+            if (Math.abs(delta) > 55) move(delta > 0 ? -1 : 1);
+            touchStartX = null;
+        }, { passive: true });
+    }
 
-    // Só adicionar o event listener se o botão existir
-    if (dropdownBtn) {
-        const dropdownContent = document.querySelector('.dropdown-content');
+    function initContactForm() {
+        const form = document.querySelector("[data-contact-form]");
+        if (!form) return;
+        const button = form.querySelector('button[type="submit"]');
+        const label = form.querySelector("[data-submit-label]");
+        const status = form.querySelector("[data-form-status]");
+        const defaultLabel = label?.textContent.trim() || "Enviar mensagem";
 
-        dropdownBtn.addEventListener('click', () => {
-            // Alterna a visibilidade do conteúdo do dropdown
-            dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+        form.addEventListener("submit", async event => {
+            event.preventDefault();
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+            status?.classList.remove("is-success", "is-error");
+            if (status) status.textContent = "";
+            if (button) button.disabled = true;
+            if (label) label.textContent = "Enviando...";
+            form.setAttribute("aria-busy", "true");
+            try {
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    body: new FormData(form),
+                    headers: { Accept: "application/json" }
+                });
+                if (!response.ok) throw new Error(`Formspree respondeu com status ${response.status}`);
+                form.reset();
+                if (status) {
+                    status.textContent = "Mensagem enviada com sucesso!";
+                    status.classList.add("is-success");
+                }
+            } catch (error) {
+                console.error("Falha ao enviar o formulário:", error);
+                if (status) {
+                    status.textContent = "Não foi possível enviar a mensagem. Tente novamente.";
+                    status.classList.add("is-error");
+                }
+            } finally {
+                form.removeAttribute("aria-busy");
+                if (button) button.disabled = false;
+                if (label) label.textContent = defaultLabel;
+            }
         });
     }
-});
 
-// Aguarde o DOM carregar antes de executar o script
-document.addEventListener("DOMContentLoaded", function () {
-    const dropdownBtn = document.querySelector('.dropdown-btn');
-    const dropdownContent = document.querySelector('.dropdown-content');
-
-    // Verifica se os elementos existem antes de adicionar o evento
-    if (dropdownBtn && dropdownContent) {
-        dropdownBtn.addEventListener('click', () => {
-            dropdownContent.classList.toggle('show');
-        });
-    }
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    // Captura o formulário
-    const formulario = document.getElementById("formulario-contato");
-
-    // Verifica se o formulário existe na página antes de executar o restante do código
-    if (!formulario) {
-        return; // Se o formulário não existir, interrompe a execução do script
-    }
-
-    // Cria a mensagem de confirmação
-    const mensagemEnviada = document.createElement("p");
-    mensagemEnviada.textContent = "Sua mensagem foi enviada com sucesso!";
-    mensagemEnviada.style.color = "green";
-    mensagemEnviada.style.fontWeight = "bold";
-    mensagemEnviada.style.display = "none";
-    mensagemEnviada.style.padding = "10px"
-
-    // Insere a mensagem no formulário, logo após o botão
-    formulario.appendChild(mensagemEnviada);
-
-    // Adiciona o evento de submissão ao formulário
-    formulario.addEventListener("submit", function (event) {
-        event.preventDefault(); // Impede o envio real do formulário
-
-        // Exibe a mensagem
-        mensagemEnviada.style.display = "block";
-
-        // Limpa os campos do formulário após o envio
-        formulario.reset();
-
-        // Oculta a mensagem após alguns segundos
-        setTimeout(() => {
-            mensagemEnviada.style.display = "none";
-        }, 5000); // Esconde após 5 segundos
+    document.addEventListener("DOMContentLoaded", () => {
+        initNavigation();
+        initTimeline();
+        initBackToTop();
+        initGallery();
+        initContactForm();
     });
-});
+})();

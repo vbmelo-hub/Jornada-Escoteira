@@ -1,106 +1,67 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
+<!DOCTYPE html><html lang="pt-BR">
 <head>
-    <!--Caracteres latinos-->
     <meta charset="UTF-8">
-
-    <!--Responsividade-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <!--Favicon-->
+    <meta name="theme-color" content="#0b1713">
+    <meta name="description" content="Galeria de registros fotográficos da trajetória escoteira de Vinícius Barros de Melo.">
+    <meta property="og:title" content="Galeria | Minha Jornada Escoteira">
+    <meta property="og:description" content="Galeria de registros fotográficos da trajetória escoteira de Vinícius Barros de Melo.">
+    <meta property="og:type" content="website">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-
-    <!--CSS Externo-->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!--Fonte externa do google fontes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <title>Linha do tempo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script.js" defer></script>
+    <title>Galeria | Minha Jornada Escoteira</title>
 </head>
-
-<body>
-    <!--Nav bar-->
-    <header id="navbar">
-        <h1><img src="images/login-arrow.svg" alt="login-arrow">SEÇÕES</h1>
-        <nav>
-            <svg id="menu-hamburger" onclick="toggleMenu()" width="40" height="40" viewBox="0 0 100 80" fill="#3B70B8">
-                <rect width="100" height="15"></rect>
-                <rect y="30" width="100" height="15"></rect>
-                <rect y="60" width="100" height="15"></rect>
-            </svg>
-            <ul class="menu">
-                <li><a class="linknavbar" href="index.html">HOME</a></li>
-                <li><a class="linknavbar" href="linhadotempo.html">LINHA DO TEMPO</a></li>
-                <li><a class="linknavbar" href="conquistas.html">CONQUISTAS E INSÍGNIAS</a></li>
-                <li><a class="linknavbar" href="galeria.html">GALERIA</a></li>
-                <li><a class="linknavbar" href="guanabara.html">MESTRE</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <!--Inicio do conteudo da pagina-->
-        <h1 style="color: white;">Galeria de fotos</h1>
-        <section id="galeria">
-            <h2 style="color: white;">Compartilhando momentos!</h2>
-            <div class="gallery">
-                <img src="images/Photos-001/Techbigs.comPicsArt_09-30-11.45.51.jpg" alt="">
-                <img src="images/Photos-001/IMG-20230919-WA0029.jpg" alt="">
-                <img src="images/Photos-001/IMG_20221030_195331_064.jpg" alt="">
-                <img src="images/Photos-001/IMG_20221030_195330_922.jpg" alt="">
-                <img src="images/Photos-001/IMG_20221030_195331_095.jpg" alt="">
-                <img src="images/Photos-001/IMG_20240531_104009_486.jpg" alt="">
-                <img src="images/Photos-001/IMG-20231104-WA0025.jpg" alt="">
-                <img src="images/Photos-001/IMG-20231111-WA0020.jpg" alt="">
-                <img src="images/Photos-001/1695002736859.jpg" alt="">
-                <img src="images/Photos-001/1695002736672.jpg" alt="">
-                <img src="images/Photos-001/1695002737463.jpg" alt="">
-                <img src="images/Photos-001/20240914_101443.jpg" alt="">
-                <img src="images/Photos-001/20240914_103502.jpg" alt="">
-                <img src="images/Photos-001/20240914_190140.jpg" alt="">
-                <img src="images/Photos-001/ceda10b7613945ea93edb3089e33534f.jpg" alt="">
-                <img src="images/Photos-001/d1fdf2364e014c4580b01f112d15145b.jpg" alt="">
-                <img src="images/Photos-001/IMG_20220929_205508_255.jpg" alt="">
-                <img src="images/Photos-001/IMG_20220929_205509_004.jpg" alt="">
-                <img src="images/Photos-001/IMG_20220929_205509_128.jpg" alt="">
-                <img src="images/Photos-001/IMG_20220930_170304_373.jpg" alt="">
-                <img src="images/Photos-001/IMG_20220930_170305_381.jpg" alt="">
-                <img src="images/Photos-001/IMG_20221003_105436_013.jpg" alt="">
-                <img src="images/Photos-001/IMG_20221003_105436_873.jpg" alt="">
-                <img src="images/Photos-001/IMG_20221003_105437_880.jpg" alt="">
-                <img src="images/Photos-001/IMG_20221003_105438_871.jpg" alt="">
-                <img src="images/Photos-001/IMG_20221003_105439_873.jpg" alt="">
-                <img src="images/Photos-001/IMG_20221003_105439_931.jpg" alt="">
-                <img src="images/Photos-001/IMG_20221003_105439_956.jpg" alt="">
-                <img src="images/Photos-001/IMG_20221022_170827.jpg" alt="">
-                <img src="images/Photos-001/IMG_20221030_182434_646.jpg" alt="">
-                <img src="images/Photos-001/IMG_20221030_185448_020.jpg" alt="">
-                <img src="images/Photos-001/IMG_20221030_185448_123.jpg" alt="">
-                <img src="images/Photos-001/20240615_133347.jpg" alt="">
-                <img src="images/Photos-001/IMG_2088.jpg" alt="">
-                <img src="images/Photos-001/IMG_20221030_195331_149.jpg" alt="">
-                <img src="images/Photos-001/IMG-20240708-WA0078.jpg" alt="">
+<body data-page="gallery"><a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header" id="navbar">
+    <div class="nav-shell container">
+        <a class="brand" href="index.html" aria-label="Minha Jornada Escoteira — página inicial">
+            <span class="brand-mark" aria-hidden="true">⚜</span>
+            <span class="brand-copy"><strong>Minha Jornada</strong><small>Movimento Escoteiro</small></span>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-navigation">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" id="primary-navigation" aria-label="Navegação principal">
+            <div class="drawer-head">
+                <span class="drawer-title">Navegação</span>
+                <button class="drawer-close" type="button" aria-label="Fechar menu">×</button>
             </div>
-        </section>
-    </main>
-
-    <!--Rodapé-->
-    <footer>
-        <p>@2025 Feito com ❤️ por Vinícius Barros de Melo | Sempre Alerta para Servir!</p>
-    </footer>
-
-    <!--Botão de voltar ao topo-->
-    <div class="botao-topo" id="voltarTopo">▲</div>
-    <script src="script.js"></script>
-</body>
-
-</html>
+            <ul><li><a class="nav-link" href="index.html">Home</a></li><li><a class="nav-link" href="linhadotempo.html">Linha do Tempo</a></li><li><a class="nav-link" href="conquistas.html">Conquistas</a></li><li><a class="nav-link" href="galeria.html" aria-current="page">Galeria</a></li><li><a class="nav-link" href="guanabara.html">Mestre</a></li></ul>
+        </nav>
+    </div>
+</header>
+<div class="nav-backdrop" data-nav-backdrop aria-hidden="true"></div>
+<main id="conteudo">
+    <section class="page-hero container"><p class="eyebrow">MEMÓRIAS EM IMAGENS</p><h1>Galeria</h1><p>Alguns registros de diferentes momentos da minha trajetória. Toque ou clique em uma foto para ampliar.</p></section>
+    <section class="gallery-section container" aria-label="Galeria de registros escoteiros"><div class="gallery-grid"><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/Techbigs.comPicsArt_09-30-11.45.51.webp" data-index="0" aria-label="Ampliar registro 1 da trajetória escoteira"><img src="images/gallery-web/Techbigs.comPicsArt_09-30-11.45.51.webp" alt="Registro da trajetória escoteira de Vinícius — foto 1" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/IMG-20230919-WA0029.webp" data-index="1" aria-label="Ampliar registro 2 da trajetória escoteira"><img src="images/gallery-web/IMG-20230919-WA0029.webp" alt="Registro da trajetória escoteira de Vinícius — foto 2" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/IMG_20221030_195331_064.webp" data-index="2" aria-label="Ampliar registro 3 da trajetória escoteira"><img src="images/gallery-web/IMG_20221030_195331_064.webp" alt="Registro da trajetória escoteira de Vinícius — foto 3" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/IMG_20221030_195330_922.webp" data-index="3" aria-label="Ampliar registro 4 da trajetória escoteira"><img src="images/gallery-web/IMG_20221030_195330_922.webp" alt="Registro da trajetória escoteira de Vinícius — foto 4" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/IMG_20221030_195331_095.webp" data-index="4" aria-label="Ampliar registro 5 da trajetória escoteira"><img src="images/gallery-web/IMG_20221030_195331_095.webp" alt="Registro da trajetória escoteira de Vinícius — foto 5" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/IMG_20240531_104009_486.webp" data-index="5" aria-label="Ampliar registro 6 da trajetória escoteira"><img src="images/gallery-web/IMG_20240531_104009_486.webp" alt="Registro da trajetória escoteira de Vinícius — foto 6" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/IMG-20231104-WA0025.webp" data-index="6" aria-label="Ampliar registro 7 da trajetória escoteira"><img src="images/gallery-web/IMG-20231104-WA0025.webp" alt="Registro da trajetória escoteira de Vinícius — foto 7" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/IMG-20231111-WA0020.webp" data-index="7" aria-label="Ampliar registro 8 da trajetória escoteira"><img src="images/gallery-web/IMG-20231111-WA0020.webp" alt="Registro da trajetória escoteira de Vinícius — foto 8" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/1695002736859.webp" data-index="8" aria-label="Ampliar registro 9 da trajetória escoteira"><img src="images/gallery-web/1695002736859.webp" alt="Registro da trajetória escoteira de Vinícius — foto 9" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/1695002736672.webp" data-index="9" aria-label="Ampliar registro 10 da trajetória escoteira"><img src="images/gallery-web/1695002736672.webp" alt="Registro da trajetória escoteira de Vinícius — foto 10" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/1695002737463.webp" data-index="10" aria-label="Ampliar registro 11 da trajetória escoteira"><img src="images/gallery-web/1695002737463.webp" alt="Registro da trajetória escoteira de Vinícius — foto 11" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/20240914_101443.webp" data-index="11" aria-label="Ampliar registro 12 da trajetória escoteira"><img src="images/gallery-web/20240914_101443.webp" alt="Registro da trajetória escoteira de Vinícius — foto 12" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/20240914_103502.webp" data-index="12" aria-label="Ampliar registro 13 da trajetória escoteira"><img src="images/gallery-web/20240914_103502.webp" alt="Registro da trajetória escoteira de Vinícius — foto 13" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/20240914_190140.webp" data-index="13" aria-label="Ampliar registro 14 da trajetória escoteira"><img src="images/gallery-web/20240914_190140.webp" alt="Registro da trajetória escoteira de Vinícius — foto 14" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/ceda10b7613945ea93edb3089e33534f.webp" data-index="14" aria-label="Ampliar registro 15 da trajetória escoteira"><img src="images/gallery-web/ceda10b7613945ea93edb3089e33534f.webp" alt="Registro da trajetória escoteira de Vinícius — foto 15" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/d1fdf2364e014c4580b01f112d15145b.webp" data-index="15" aria-label="Ampliar registro 16 da trajetória escoteira"><img src="images/gallery-web/d1fdf2364e014c4580b01f112d15145b.webp" alt="Registro da trajetória escoteira de Vinícius — foto 16" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/IMG_20220929_205508_255.webp" data-index="16" aria-label="Ampliar registro 17 da trajetória escoteira"><img src="images/gallery-web/IMG_20220929_205508_255.webp" alt="Registro da trajetória escoteira de Vinícius — foto 17" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/IMG_20220929_205509_004.webp" data-index="17" aria-label="Ampliar registro 18 da trajetória escoteira"><img src="images/gallery-web/IMG_20220929_205509_004.webp" alt="Registro da trajetória escoteira de Vinícius — foto 18" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/IMG_20220929_205509_128.webp" data-index="18" aria-label="Ampliar registro 19 da trajetória escoteira"><img src="images/gallery-web/IMG_20220929_205509_128.webp" alt="Registro da trajetória escoteira de Vinícius — foto 19" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/IMG_20220930_170304_373.webp" data-index="19" aria-label="Ampliar registro 20 da trajetória escoteira"><img src="images/gallery-web/IMG_20220930_170304_373.webp" alt="Registro da trajetória escoteira de Vinícius — foto 20" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/IMG_20220930_170305_381.webp" data-index="20" aria-label="Ampliar registro 21 da trajetória escoteira"><img src="images/gallery-web/IMG_20220930_170305_381.webp" alt="Registro da trajetória escoteira de Vinícius — foto 21" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/IMG_20221003_105436_013.webp" data-index="21" aria-label="Ampliar registro 22 da trajetória escoteira"><img src="images/gallery-web/IMG_20221003_105436_013.webp" alt="Registro da trajetória escoteira de Vinícius — foto 22" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/IMG_20221003_105436_873.webp" data-index="22" aria-label="Ampliar registro 23 da trajetória escoteira"><img src="images/gallery-web/IMG_20221003_105436_873.webp" alt="Registro da trajetória escoteira de Vinícius — foto 23" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/IMG_20221003_105437_880.webp" data-index="23" aria-label="Ampliar registro 24 da trajetória escoteira"><img src="images/gallery-web/IMG_20221003_105437_880.webp" alt="Registro da trajetória escoteira de Vinícius — foto 24" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/IMG_20221003_105438_871.webp" data-index="24" aria-label="Ampliar registro 25 da trajetória escoteira"><img src="images/gallery-web/IMG_20221003_105438_871.webp" alt="Registro da trajetória escoteira de Vinícius — foto 25" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/IMG_20221003_105439_873.webp" data-index="25" aria-label="Ampliar registro 26 da trajetória escoteira"><img src="images/gallery-web/IMG_20221003_105439_873.webp" alt="Registro da trajetória escoteira de Vinícius — foto 26" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/IMG_20221003_105439_931.webp" data-index="26" aria-label="Ampliar registro 27 da trajetória escoteira"><img src="images/gallery-web/IMG_20221003_105439_931.webp" alt="Registro da trajetória escoteira de Vinícius — foto 27" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/IMG_20221003_105439_956.webp" data-index="27" aria-label="Ampliar registro 28 da trajetória escoteira"><img src="images/gallery-web/IMG_20221003_105439_956.webp" alt="Registro da trajetória escoteira de Vinícius — foto 28" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/IMG_20221022_170827.webp" data-index="28" aria-label="Ampliar registro 29 da trajetória escoteira"><img src="images/gallery-web/IMG_20221022_170827.webp" alt="Registro da trajetória escoteira de Vinícius — foto 29" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/IMG_20221030_182434_646.webp" data-index="29" aria-label="Ampliar registro 30 da trajetória escoteira"><img src="images/gallery-web/IMG_20221030_182434_646.webp" alt="Registro da trajetória escoteira de Vinícius — foto 30" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/IMG_20221030_185448_020.webp" data-index="30" aria-label="Ampliar registro 31 da trajetória escoteira"><img src="images/gallery-web/IMG_20221030_185448_020.webp" alt="Registro da trajetória escoteira de Vinícius — foto 31" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/IMG_20221030_185448_123.webp" data-index="31" aria-label="Ampliar registro 32 da trajetória escoteira"><img src="images/gallery-web/IMG_20221030_185448_123.webp" alt="Registro da trajetória escoteira de Vinícius — foto 32" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/20240615_133347.webp" data-index="32" aria-label="Ampliar registro 33 da trajetória escoteira"><img src="images/gallery-web/20240615_133347.webp" alt="Registro da trajetória escoteira de Vinícius — foto 33" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/IMG_2088.webp" data-index="33" aria-label="Ampliar registro 34 da trajetória escoteira"><img src="images/gallery-web/IMG_2088.webp" alt="Registro da trajetória escoteira de Vinícius — foto 34" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/IMG_20221030_195331_149.webp" data-index="34" aria-label="Ampliar registro 35 da trajetória escoteira"><img src="images/gallery-web/IMG_20221030_195331_149.webp" alt="Registro da trajetória escoteira de Vinícius — foto 35" loading="lazy" decoding="async"></button><button class="gallery-item" type="button" data-gallery-item data-full="images/gallery-web/IMG-20240708-WA0078.webp" data-index="35" aria-label="Ampliar registro 36 da trajetória escoteira"><img src="images/gallery-web/IMG-20240708-WA0078.webp" alt="Registro da trajetória escoteira de Vinícius — foto 36" loading="lazy" decoding="async"></button></div></section>
+</main>
+<div class="lightbox" data-lightbox hidden role="dialog" aria-modal="true" aria-label="Visualização ampliada da galeria">
+    <button class="lightbox-close" type="button" aria-label="Fechar imagem">×</button>
+    <button class="lightbox-nav lightbox-prev" type="button" aria-label="Imagem anterior">‹</button>
+    <figure><img data-lightbox-image src="" alt=""><figcaption data-lightbox-caption></figcaption></figure>
+    <button class="lightbox-nav lightbox-next" type="button" aria-label="Próxima imagem">›</button>
+</div>
+<footer class="site-footer">
+    <div class="container footer-grid">
+        <div>
+            <a class="footer-brand" href="index.html"><span aria-hidden="true">⚜</span> Vinícius Barros de Melo</a>
+            <p>Minha Jornada no Movimento Escoteiro</p>
+        </div>
+        <nav class="footer-links" aria-label="Redes sociais">
+            <a href="https://www.instagram.com/vinixius_ba/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
+            <a href="https://github.com/vbmelo-hub" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+            <a href="https://www.linkedin.com/in/vb-melo/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+        </nav>
+    </div>
+    <div class="container footer-bottom">
+        <span>© 2026 Vinícius Barros de Melo</span>
+        <span>Sempre Alerta para Servir <span aria-hidden="true">⚜</span></span>
+    </div>
+</footer>
+<button class="back-to-top" id="voltarTopo" type="button" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5l-7 7 1.4 1.4L11 8.8V20h2V8.8l4.6 4.6L19 12z"/></svg>
+</button></body></html>

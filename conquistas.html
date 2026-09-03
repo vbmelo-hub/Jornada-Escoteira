@@ -1,260 +1,66 @@
 <!DOCTYPE html>
-<html lang="pt-br">
 
+<html lang="pt-BR">
 <head>
-  <!--Caracteres latinos-->
-  <meta charset="UTF-8">
-
-  <!--Responsividade-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!--Bootstrap-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-  <!--Favicon-->
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-
-  <!--CSS Externo-->
-  <link rel="stylesheet" href="css/style.css">
-
-  <!--Fonte externa do google fontes-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet">
-
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-  <title>Linha do tempo</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#0b1713" name="theme-color"/>
+<meta content="Progressões, conquistas e especialidades obtidas por Vinícius Barros de Melo ao longo de sua trajetória no Movimento Escoteiro." name="description"/>
+<meta content="Conquistas e Insígnias | Minha Jornada Escoteira" property="og:title"/>
+<meta content="Progressões, conquistas e especialidades obtidas por Vinícius Barros de Melo ao longo de sua trajetória no Movimento Escoteiro." property="og:description"/>
+<meta content="website" property="og:type"/>
+<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+<script defer="" src="script.js"></script>
+<title>Conquistas e Insígnias | Minha Jornada Escoteira</title>
 </head>
-
-<body>
-   <!--Nav bar-->
-   <header id="navbar">
-    <h1><img src="images/login-arrow.svg" alt="login-arrow">SEÇÕES</h1>
-    <nav>
-        <svg id="menu-hamburger" onclick="toggleMenu()" width="40" height="40" viewBox="0 0 100 80" fill="#3B70B8">
-            <rect width="100" height="15"></rect>
-            <rect y="30" width="100" height="15"></rect>
-            <rect y="60" width="100" height="15"></rect>
-        </svg>
-        <ul class="menu">
-            <li><a class="linknavbar" href="index.html">HOME</a></li>
-            <li><a class="linknavbar" href="linhadotempo.html">LINHA DO TEMPO</a></li>
-            <li><a class="linknavbar" href="conquistas.html">CONQUISTAS E INSÍGNIAS</a></li>
-            <li><a class="linknavbar" href="galeria.html">GALERIA</a></li>
-            <li><a class="linknavbar" href="guanabara.html">MESTRE</a></li>
-        </ul>
-    </nav>
+<body data-page="achievements"><a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header" id="navbar">
+<div class="nav-shell container">
+<a aria-label="Minha Jornada Escoteira — página inicial" class="brand" href="index.html">
+<span aria-hidden="true" class="brand-mark">⚜</span>
+<span class="brand-copy"><strong>Minha Jornada</strong><small>Movimento Escoteiro</small></span>
+</a>
+<button aria-controls="primary-navigation" aria-expanded="false" aria-label="Abrir menu" class="nav-toggle" type="button">
+<span></span><span></span><span></span>
+</button>
+<nav aria-label="Navegação principal" class="site-nav" id="primary-navigation">
+<div class="drawer-head">
+<span class="drawer-title">Navegação</span>
+<button aria-label="Fechar menu" class="drawer-close" type="button">×</button>
+</div>
+<ul><li><a class="nav-link" href="index.html">Home</a></li><li><a class="nav-link" href="linhadotempo.html">Linha do Tempo</a></li><li><a aria-current="page" class="nav-link" href="conquistas.html">Conquistas</a></li><li><a class="nav-link" href="galeria.html">Galeria</a></li><li><a class="nav-link" href="guanabara.html">Mestre</a></li></ul>
+</nav>
+</div>
 </header>
-
-  <main>
-    <!--Inicio do conteudo da pagina-->
-    <h1 style="color: white;">Minhas Progressões e Conquistas</h1>
-    <section>
-      <h2 style="color: white;">Conquistas</h2>
-      <div class="table-responsive">
-      <table>
-        <tr>
-          <th>Conquistas</th>
-          <th>Data</th>
-          <th>Ramo</th>
-        </tr>
-        <tr>
-          <td> <img class="distintivos" src="images/Conquistas/promessa_escoteira.png" alt="Distintivo de Promessa"
-              title="Distintivo da promessa"></td>
-          <td>03/08/2018</td>
-          <td>Escoteiro</td>
-        </tr>
-        <tr>
-          <td><img class="distintivos" src="images/Conquistas/cordao_verde_amarelo.png" alt="Cordão Verde e Amarelo"
-              title="Cordão verde e amarelo"></td>
-          <td>21/06/2019</td>
-          <td>Escoteiro</td>
-        </tr>
-        <tr>
-          <td><img class="distintivos" src="images/Conquistas/aprender.png" alt="Aprender"
-              title="Distintivo do aprender"></td>
-          <td>20/07/2019</td>
-          <td>Escoteiro</td>
-        </tr>
-        <tr>
-          <td><img class="distintivos" src="images/Conquistas/cordao+vermelho-branco.png" alt="Cordão vermelho e branco"
-              title="Cordão vermelho e branco"></td>
-          <td>10/09/2019</td>
-          <td>Escoteiro</td>
-        </tr>
-      </table>
-    </div>
-    </section>
-
-    <section>
-      <h2 style="color: white;">Progressão</h2>
-      <div class="table-responsive">
-      <table>
-        <tr>
-          <th>Progressão</th>
-          <th>Data</th>
-          <th>Ramo</th>
-        </tr>
-        <tr>
-          <td> <img class="distintivos" src="images/Progressão/distintivo_pista.png" alt="Distintivo Pistas"
-              title="Distintivo Pista"></td>
-          <td>03/08/2018</td>
-          <td>Escoteiro</td>
-        </tr>
-        <tr>
-          <td><img class="distintivos" src="images/Progressão/distintivo_trilha.png" alt="Distintivo Trilha"
-              title="Distintivo Trilha"></td>
-          <td>08/05/2019</td>
-          <td>Escoteiro</td>
-        </tr>
-        <tr>
-          <td><img class="distintivos" src="images/Progressão/dist_travessia.png" alt="Travessia"
-              title="Distintivo Travessia"></td>
-          <td>08/06/2019</td>
-          <td>Sênior</td>
-        </tr>
-        <tr>
-          <td><img class="distintivos" src="images/Progressão/escalada.png" alt="Escalada" title="Distintivo Escalada">
-          </td>
-          <td>07/03/2020</td>
-          <td>Sênior</td>
-        </tr>
-        <tr>
-          <td><img class="distintivos" src="images/Progressão/insignia_do_comprometimento.png"
-              alt="Insígnia Comprometimento" title="Insígnia Comprometimento"></td>
-          <td>19/08/2023</td>
-          <td>Pioneiro</td>
-        </tr>
-      </table>
-      </div>
-    </section>
-
-    <section>
-      <h2 style="color: white;">Especialidades</h2>
-      <div class="table-responsive">
-      <table>
-        <tr>
-          <th>Especialidade</th>
-          <th>Data</th>
-          <th>Nível</th>
-        </tr>
-        <tr>
-          <td> <img class="distintivos" src="images/Especialidades/esp_acampamento.png" alt="Distintivo Acampamento"
-              title="Distintivo Acampamento"></td>
-          <td>08/06/2019</td>
-          <td>Nível 1</td>
-        </tr>
-        <tr>
-          <td><img class="distintivos" src="images/Especialidades/anime.png" alt="Distintivo Anime"
-              title="Distintivo Anime"></td>
-          <td>22/05/2019</td>
-          <td>Nível 1</td>
-        </tr>
-        <tr>
-          <td><img class="distintivos" src="images/Especialidades/animaisEstimacao.png"
-              alt="Distintivo Criação de Animais de Estimação" title="Distintivo Criação de Animais de Estimação"></td>
-          <td>30/08/2019</td>
-          <td>Nível 1</td>
-        </tr>
-        <tr>
-          <td><img class="distintivos" src="images/Especialidades/fogoConselho.png" alt="Distintivo Fogo de conselho"
-              title="Distintivo Fogo de conselho"></td>
-          <td>19/10/2022</td>
-          <td>Nível 1</td>
-        </tr>
-        <tr>
-          <td><img class="distintivos" src="images/Especialidades/pintura.png"
-              alt="Distintivo Pintura e Desenho Artístico" title="Distintivo Pintura e Desenho Artístico"></td>
-          <td>15/04/2019</td>
-          <td>Nível 1</td>
-        </tr>
-        <tr>
-          <td><img class="distintivos" src="images/Especialidades/rpg.png" alt="Distintivo RPG(Role-playing-game)"
-              title="Distintivo RPG(Role-playing-game)"></td>
-          <td>19/10/2022</td>
-          <td>Nível 1</td>
-        </tr>
-        <tr>
-          <td><img class="distintivos" src="images/Especialidades/saneamento.png" alt="Distintivo Saneamento Ambiental"
-              title="Distintivo Saneamento Ambiental"></td>
-          <td>21/06/2019</td>
-          <td>Nível 1</td>
-        </tr>
-        <tr>
-          <td><img class="distintivos" src="images/Especialidades/videogame.png" alt="Distintivo Videogame"
-              title="Distintivo Videogame"></td>
-          <td>01/06/2019</td>
-          <td>Nível 1</td>
-        </tr>
-        <tr>
-          <td><img class="distintivos" src="images/Especialidades/culinaria.png" alt="Distintivo Culinária"
-              title="Distintivo Culinária"></td>
-          <td>19/10/2022</td>
-          <td>Nível 2</td>
-        </tr>
-        <tr>
-          <td><img class="distintivos" src="images/Especialidades/ferramentasCorte.png"
-              alt="Distintivo Ferramentas de corte" title="Distintivo Ferramentas de corte"></td>
-          <td>04/00/2019</td>
-          <td>Nível 2</td>
-        </tr>
-        <tr>
-          <td><img width="65" src="images/Especialidades/natacao.png" alt="Distintivo Natação"
-              title="Distintivo Natação"></td>
-          <td>20/07/2019</td>
-          <td>Nível 2</td>
-        </tr>
-        <tr>
-          <td><img width="65" src="images/Especialidades/pioneiria.png" alt="Distintivo Pioneiria"
-              title="Distintivo Pioneiria"></td>
-          <td>19/10/2022</td>
-          <td>Nível 2</td>
-        </tr>
-        <tr>
-          <td><img width="65" src="images/Especialidades/rd.png" alt="Distintivo Reparos Domésticos"
-              title="Distintivo Reparos Domésticos"></td>
-          <td>10/09/2019</td>
-          <td>Nível 2</td>
-        </tr>
-        <tr>
-          <td><img width="65" src="images/Especialidades/socorrismo.png" alt="Distintivo Socorrismo"
-              title="Distintivo Socorrismo"></td>
-          <td>17/09/2019</td>
-          <td>Nível 2</td>
-        </tr>
-        <tr>
-          <td><img class="distintivos" src="images/Especialidades/ts.png" alt="Distintivo Técnicas de Sapa"
-              title="Distintivo Técnicas de Sapa"></td>
-          <td>19/10/2022</td>
-          <td>Nível 2</td>
-        </tr>
-        <tr>
-          <td><img class="distintivos" src="images/Especialidades/ps.png" alt="Distintivo Primeiros Socorros"
-              title="Distintivo Primeiros Socorros"></td>
-          <td>28/10/2022</td>
-          <td>Nível 3</td>
-        </tr>
-        <tr>
-          <td><img class="distintivos" src="images/Especialidades/bucais.png" alt="Distintivo Cuidados Bucais"
-              title="Distintivo Cuidados Bucais"></td>
-          <td>28/10/2022</td>
-          <td>Nível 3</td>
-        </tr>
-      </table>
-    </div>
-    </section>
-  </main>
-
-  <!--Rodapé-->
-  <footer>
-    <p>@2025 Feito com ❤️ por Vinícius Barros de Melo | Sempre Alerta para Servir!</p>
-  </footer>
-
-  <!--Botão de voltar ao topo-->
-  <div class="botao-topo" id="voltarTopo">▲</div>
-  <script src="script.js"></script>
-</body>
-
-</html>
+<div aria-hidden="true" class="nav-backdrop" data-nav-backdrop=""></div>
+<main id="conteudo">
+<section class="page-hero container">
+<p class="eyebrow">PROGRESSÃO E APRENDIZADO</p>
+<h1>Conquistas e Insígnias</h1>
+<p>Registros de progressão, distinções, especialidades e reconhecimentos presentes na minha Ficha Individual (120/121).</p>
+<p class="source-note">As datas e os níveis abaixo foram conferidos na ficha emitida em 02/09/2026. Campos sem data na ficha não foram apresentados como conquistas obtidas.</p>
+</section>
+<section aria-labelledby="conquistas-title" class="achievement-section container"><div class="section-heading compact"><p class="eyebrow">MARCOS</p><h2 id="conquistas-title">Conquistas e reconhecimentos</h2><p>Reconhecimentos, cordões e marcos com data ou concessão registrada na Ficha Individual.</p></div><div class="achievement-grid"><article class="achievement-card"><div class="badge-image"><img alt="Distintivo Promessa Escoteira" decoding="async" loading="lazy" src="images/Conquistas/promessa_escoteira.png"/></div><div class="achievement-copy"><h3>Promessa Escoteira</h3><dl><div><dt>Data</dt><dd>03/08/2018</dd></div><div><dt>Ramo</dt><dd>Escoteiro</dd></div></dl></div></article><article class="achievement-card"><div class="badge-image"><img alt="Distintivo Cordão Verde e Amarelo" decoding="async" loading="lazy" src="images/Conquistas/cordao_verde_amarelo.png"/></div><div class="achievement-copy"><h3>Cordão Verde e Amarelo</h3><dl><div><dt>Data</dt><dd>21/06/2019</dd></div><div><dt>Ramo</dt><dd>Escoteiro</dd></div></dl></div></article><article class="achievement-card"><div class="badge-image"><img alt="Distintivo Distintivo do Aprender" decoding="async" loading="lazy" src="images/Conquistas/aprender.png"/></div><div class="achievement-copy"><h3>Distintivo do Aprender</h3><dl><div><dt>Data</dt><dd>20/07/2019</dd></div><div><dt>Ramo</dt><dd>Escoteiro</dd></div></dl></div></article><article class="achievement-card"><div class="badge-image"><img alt="Distintivo Cordão Vermelho e Branco" decoding="async" loading="lazy" src="images/Conquistas/cordao+vermelho-branco.png"/></div><div class="achievement-copy"><h3>Cordão Vermelho e Branco</h3><dl><div><dt>Data</dt><dd>10/09/2019</dd></div><div><dt>Ramo</dt><dd>Escoteiro</dd></div></dl></div></article><article class="achievement-card"><div class="badge-image badge-image--symbol"><span aria-hidden="true" class="badge-symbol">★</span></div><div class="achievement-copy"><h3>Elogio de Grupo</h3><dl><div><dt>Data</dt><dd>03/09/2022</dd></div><div><dt>Motivo</dt><dd>Ajuda e socorro em tempestade</dd></div></dl></div></article><article class="achievement-card"><div class="badge-image badge-image--symbol"><span aria-hidden="true" class="badge-symbol">✦</span></div><div class="achievement-copy"><h3>Estrela de Atividades — 4 anos</h3><dl><div><dt>Data</dt><dd>10/12/2022</dd></div><div><dt>Registro</dt><dd>2 anos Escoteiro + 2 anos Sênior</dd></div></dl></div></article><article class="achievement-card"><div class="badge-image badge-image--symbol"><span aria-hidden="true" class="badge-symbol">⚜</span></div><div class="achievement-copy"><h3>Pioneiro investido</h3><dl><div><dt>Data</dt><dd>25/04/2026</dd></div><div><dt>Marco</dt><dd>Metade da progrssão pioneira</dd></div></dl></div></article><article class="achievement-card"><div class="badge-image badge-image--symbol"><span aria-hidden="true" class="badge-symbol">★</span></div><div class="achievement-copy"><h3>Elogio Regional — Trilha Ecológica Suspensa</h3><dl><div><dt>Data</dt><dd>30/09/2023</dd></div><div><dt>Reconhecimento</dt><dd>Expoacre 2023</dd></div></dl></div></article><article class="achievement-card"><div class="badge-image badge-image--symbol"><span aria-hidden="true" class="badge-symbol">✦</span></div><div class="achievement-copy"><h3>Estrela de Atividade — 5 anos</h3><dl><div><dt>Data</dt><dd>22/03/2025</dd></div><div><dt>Registro</dt><dd>+ estrela de 1 ano do Ramo Pioneiro</dd></div></dl></div></article></div></section><section class="achievement-section section-soft"><div class="container"><div class="section-heading compact"><p class="eyebrow">CAMINHO</p><h2>Progressão registrada</h2><p>Etapas e insígnias de progressão com data preenchida na Ficha Individual.</p></div><div class="achievement-grid"><article class="achievement-card"><div class="badge-image"><img alt="Distintivo Pista" decoding="async" loading="lazy" src="images/Progressao/distintivo_pista.png"/></div><div class="achievement-copy"><h3>Pista</h3><dl><div><dt>Data</dt><dd>03/08/2018</dd></div><div><dt>Ramo</dt><dd>Escoteiro</dd></div></dl></div></article><article class="achievement-card"><div class="badge-image"><img alt="Distintivo Trilha" decoding="async" loading="lazy" src="images/Progressao/distintivo_trilha.png"/></div><div class="achievement-copy"><h3>Trilha</h3><dl><div><dt>Data</dt><dd>08/05/2019</dd></div><div><dt>Ramo</dt><dd>Escoteiro</dd></div></dl></div></article><article class="achievement-card"><div class="badge-image"><img alt="Distintivo Travessia" decoding="async" loading="lazy" src="images/Progressao/dist_travessia.png"/></div><div class="achievement-copy"><h3>Travessia</h3><dl><div><dt>Data</dt><dd>08/06/2019</dd></div><div><dt>Ramo</dt><dd>Escoteiro</dd></div></dl></div></article><article class="achievement-card"><div class="badge-image"><img alt="Distintivo Escalada" decoding="async" loading="lazy" src="images/Progressao/escalada.png"/></div><div class="achievement-copy"><h3>Escalada</h3><dl><div><dt>Data</dt><dd>07/03/2020</dd></div><div><dt>Ramo</dt><dd>Sênior</dd></div></dl></div></article><article class="achievement-card"><div class="badge-image"><img alt="Distintivo Insígnia do Comprometimento" decoding="async" loading="lazy" src="images/Progressao/insignia_do_comprometimento.png"/></div><div class="achievement-copy"><h3>Insígnia do Comprometimento</h3><dl><div><dt>Data</dt><dd>19/08/2023</dd></div><div><dt>Ramo</dt><dd>Pioneiro</dd></div></dl></div></article><article class="achievement-card"><div class="badge-image"><img alt="Insígnia da Cidadania" decoding="async" loading="lazy" src="images/Progressao/insignia_cidadania.png"/></div><div class="achievement-copy"><h3>Insígnia Cidadania</h3><dl><div><dt>Data</dt><dd>14/10/2024</dd></div><div><dt>Ramo</dt><dd>Pioneiro</dd></div></dl></div></article></div></div></section><section aria-labelledby="especialidades-title" class="achievement-section container"><div class="section-heading compact"><p class="eyebrow">HABILIDADES</p><h2 id="especialidades-title">Especialidades</h2><p>Especialidades com data e nível registrados na Ficha Individual.</p></div><div class="achievement-grid specialties-grid"><article class="achievement-card"><div class="badge-image"><img alt="Distintivo Pintura e Desenho Artístico" decoding="async" loading="lazy" src="images/Especialidades/pintura.png"/></div><div class="achievement-copy"><h3>Pintura e Desenho Artístico</h3><dl><div><dt>Data</dt><dd>15/04/2019</dd></div><div><dt>Nível</dt><dd>Nível 1</dd></div></dl></div></article><article class="achievement-card"><div class="badge-image"><img alt="Distintivo Anime" decoding="async" loading="lazy" src="images/Especialidades/anime.png"/></div><div class="achievement-copy"><h3>Anime</h3><dl><div><dt>Data</dt><dd>22/05/2019</dd></div><div><dt>Nível</dt><dd>Nível 1</dd></div></dl></div></article><article class="achievement-card"><div class="badge-image"><img alt="Distintivo Videogame" decoding="async" loading="lazy" src="images/Especialidades/videogame.png"/></div><div class="achievement-copy"><h3>Videogame</h3><dl><div><dt>Data</dt><dd>01/06/2019</dd></div><div><dt>Nível</dt><dd>Nível 1</dd></div></dl></div></article><article class="achievement-card"><div class="badge-image"><img alt="Distintivo Acampamento" decoding="async" loading="lazy" src="images/Especialidades/esp_acampamento.png"/></div><div class="achievement-copy"><h3>Acampamento</h3><dl><div><dt>Data</dt><dd>08/06/2019</dd></div><div><dt>Nível</dt><dd>Nível 1</dd></div></dl></div></article><article class="achievement-card"><div class="badge-image"><img alt="Distintivo Saneamento Ambiental" decoding="async" loading="lazy" src="images/Especialidades/saneamento.png"/></div><div class="achievement-copy"><h3>Saneamento Ambiental</h3><dl><div><dt>Data</dt><dd>21/06/2019</dd></div><div><dt>Nível</dt><dd>Nível 1</dd></div></dl></div></article><article class="achievement-card"><div class="badge-image"><img alt="Distintivo Natação" decoding="async" loading="lazy" src="images/Especialidades/natacao.png"/></div><div class="achievement-copy"><h3>Natação</h3><dl><div><dt>Data</dt><dd>20/07/2019</dd></div><div><dt>Nível</dt><dd>Nível 2</dd></div></dl></div></article><article class="achievement-card"><div class="badge-image"><img alt="Distintivo Criação de Animais de Estimação" decoding="async" loading="lazy" src="images/Especialidades/animaisEstimacao.png"/></div><div class="achievement-copy"><h3>Criação de Animais de Estimação</h3><dl><div><dt>Data</dt><dd>30/08/2019</dd></div><div><dt>Nível</dt><dd>Nível 2</dd></div></dl></div></article><article class="achievement-card"><div class="badge-image"><img alt="Distintivo Ferramentas de Corte" decoding="async" loading="lazy" src="images/Especialidades/ferramentasCorte.png"/></div><div class="achievement-copy"><h3>Ferramentas de Corte</h3><dl><div><dt>Data</dt><dd>04/09/2019</dd></div><div><dt>Nível</dt><dd>Nível 2</dd></div></dl></div></article><article class="achievement-card"><div class="badge-image"><img alt="Distintivo Reparos Domésticos" decoding="async" loading="lazy" src="images/Especialidades/rd.png"/></div><div class="achievement-copy"><h3>Reparos Domésticos</h3><dl><div><dt>Data</dt><dd>10/09/2019</dd></div><div><dt>Nível</dt><dd>Nível 2</dd></div></dl></div></article><article class="achievement-card"><div class="badge-image"><img alt="Distintivo Socorrismo" decoding="async" loading="lazy" src="images/Especialidades/socorrismo.png"/></div><div class="achievement-copy"><h3>Socorrismo</h3><dl><div><dt>Data</dt><dd>17/09/2019</dd></div><div><dt>Nível</dt><dd>Nível 1</dd></div></dl></div></article><article class="achievement-card"><div class="badge-image"><img alt="Distintivo RPG (Role-playing game)" decoding="async" loading="lazy" src="images/Especialidades/rpg.png"/></div><div class="achievement-copy"><h3>RPG (Role-playing game)</h3><dl><div><dt>Data</dt><dd>19/10/2022</dd></div><div><dt>Nível</dt><dd>Nível 1</dd></div></dl></div></article><article class="achievement-card"><div class="badge-image"><img alt="Distintivo Culinária" decoding="async" loading="lazy" src="images/Especialidades/culinaria.png"/></div><div class="achievement-copy"><h3>Culinária</h3><dl><div><dt>Data</dt><dd>19/10/2022</dd></div><div><dt>Nível</dt><dd>Nível 2</dd></div></dl></div></article><article class="achievement-card"><div class="badge-image"><img alt="Distintivo Fogo de Conselho" decoding="async" loading="lazy" src="images/Especialidades/fogoConselho.png"/></div><div class="achievement-copy"><h3>Fogo de Conselho</h3><dl><div><dt>Data</dt><dd>19/10/2022</dd></div><div><dt>Nível</dt><dd>Nível 1</dd></div></dl></div></article><article class="achievement-card"><div class="badge-image"><img alt="Distintivo Pioneiria" decoding="async" loading="lazy" src="images/Especialidades/pioneiria.png"/></div><div class="achievement-copy"><h3>Pioneiria</h3><dl><div><dt>Data</dt><dd>19/10/2022</dd></div><div><dt>Nível</dt><dd>Nível 2</dd></div></dl></div></article><article class="achievement-card"><div class="badge-image"><img alt="Distintivo Técnicas de Sapa" decoding="async" loading="lazy" src="images/Especialidades/ts.png"/></div><div class="achievement-copy"><h3>Técnicas de Sapa</h3><dl><div><dt>Data</dt><dd>19/10/2022</dd></div><div><dt>Nível</dt><dd>Nível 2</dd></div></dl></div></article><article class="achievement-card"><div class="badge-image"><img alt="Distintivo Primeiros Socorros" decoding="async" loading="lazy" src="images/Especialidades/ps.png"/></div><div class="achievement-copy"><h3>Primeiros Socorros</h3><dl><div><dt>Data</dt><dd>28/10/2022</dd></div><div><dt>Nível</dt><dd>Nível 3</dd></div></dl></div></article><article class="achievement-card"><div class="badge-image"><img alt="Distintivo Cuidados Bucais" decoding="async" loading="lazy" src="images/Especialidades/bucais.png"/></div><div class="achievement-copy"><h3>Cuidados Bucais</h3><dl><div><dt>Data</dt><dd>28/10/2022</dd></div><div><dt>Nível</dt><dd>Nível 3</dd></div></dl></div></article></div></section></main><footer class="site-footer">
+<div class="container footer-grid">
+<div>
+<a class="footer-brand" href="index.html"><span aria-hidden="true">⚜</span> Vinícius Barros de Melo</a>
+<p>Minha Jornada no Movimento Escoteiro</p>
+</div>
+<nav aria-label="Redes sociais" class="footer-links">
+<a href="https://www.instagram.com/vinixius_ba/" rel="noopener noreferrer" target="_blank">Instagram <span aria-hidden="true">↗</span></a>
+<a href="https://github.com/vbmelo-hub" rel="noopener noreferrer" target="_blank">GitHub <span aria-hidden="true">↗</span></a>
+<a href="https://www.linkedin.com/in/vb-melo/" rel="noopener noreferrer" target="_blank">LinkedIn <span aria-hidden="true">↗</span></a>
+</nav>
+</div>
+<div class="container footer-bottom">
+<span>© 2026 Vinícius Barros de Melo</span>
+<span>Sempre Alerta para Servir <span aria-hidden="true">⚜</span></span>
+</div>
+</footer>
+<button aria-label="Voltar ao topo" class="back-to-top" id="voltarTopo" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 5l-7 7 1.4 1.4L11 8.8V20h2V8.8l4.6 4.6L19 12z"></path></svg>
+</button></body></html>

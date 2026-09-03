@@ -1,187 +1,165 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <!--Caracteres latinos-->
     <meta charset="UTF-8">
-
-    <!--Responsividade-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <!--Favicon-->
+    <meta name="theme-color" content="#0b1713">
+    <meta name="description" content="Trajetória de Vinícius Barros de Melo no Movimento Escoteiro, reunindo experiências, conquistas, registros e sua relação com tecnologia.">
+    <meta property="og:title" content="Minha Jornada Escoteira | Vinícius Barros de Melo">
+    <meta property="og:description" content="Trajetória de Vinícius Barros de Melo no Movimento Escoteiro, reunindo experiências, conquistas, registros e sua relação com tecnologia.">
+    <meta property="og:type" content="website">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-
-    <!--CSS Externo-->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!--Fonte externa do google fontes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-
-    <title>My life in the scout movement</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script.js" defer></script>
+    <title>Minha Jornada Escoteira | Vinícius Barros de Melo</title>
 </head>
-
-<body>
-    <!--Nav bar-->
-    <header id="navbar">
-        <h1><img src="images/login-arrow.svg" alt="login-arrow">SEÇÕES</h1>
-        <nav>
-            <svg id="menu-hamburger" onclick="toggleMenu()" width="40" height="40" viewBox="0 0 100 80" fill="#3B70B8">
-                <rect width="100" height="15"></rect>
-                <rect y="30" width="100" height="15"></rect>
-                <rect y="60" width="100" height="15"></rect>
-            </svg>
-            <ul class="menu">
-                <li><a class="linknavbar" href="index.html">HOME</a></li>
-                <li><a class="linknavbar" href="linhadotempo.html">LINHA DO TEMPO</a></li>
-                <li><a class="linknavbar" href="conquistas.html">CONQUISTAS E INSÍGNIAS</a></li>
-                <li><a class="linknavbar" href="galeria.html">GALERIA</a></li>
-                <li><a class="linknavbar" href="guanabara.html">MESTRE</a></li>
-            </ul>
+<body data-page="home">
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header" id="navbar">
+    <div class="nav-shell container">
+        <a class="brand" href="index.html" aria-label="Minha Jornada Escoteira — página inicial">
+            <span class="brand-mark" aria-hidden="true">⚜</span>
+            <span class="brand-copy"><strong>Minha Jornada</strong><small>Movimento Escoteiro</small></span>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-navigation">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" id="primary-navigation" aria-label="Navegação principal">
+            <div class="drawer-head">
+                <span class="drawer-title">Navegação</span>
+                <button class="drawer-close" type="button" aria-label="Fechar menu">×</button>
+            </div>
+            <ul><li><a class="nav-link" href="index.html" aria-current="page">Home</a></li><li><a class="nav-link" href="linhadotempo.html">Linha do Tempo</a></li><li><a class="nav-link" href="conquistas.html">Conquistas</a></li><li><a class="nav-link" href="galeria.html">Galeria</a></li><li><a class="nav-link" href="guanabara.html">Mestre</a></li></ul>
         </nav>
-    </header>
-
-    <main>
-        <!--Inicio das informações sobre mim-->
-        <img id="eu" src="images/eu.png" alt="Vinícius Barros" title="Foto minha com uniforme">
-
-        <section class="quemsoueu">
-            <h2>👋 Quem Sou Eu?</h2>
-            <p>Olá! Meu nome é <strong><a target="_blank"
-                        href="https://www.instagram.com/vinixius_ba/">Vinícius</a></strong> e sou escoteiro do Ramo
-                Pioneiro no <strong><a target="_blank" href="https://www.instagram.com/4ge.leonciodecarvalho/">Grupo
-                        Escoteiro Leôncio de Carvalho</a></strong> da minha cidade, <strong><a target="_blank"
-                        href="https://g.co/kgs/6hxBE3e">Rio Branco - Acre</a></strong>. Além do escotismo, sou estudante
-                de Sistemas para Internet no <strong><a target="_blank"
-                        href="https://www.instagram.com/ifacoficial/">IFAC</a></strong>, apaixonado por tecnologia e
-                inovação.</p>
-
-        </section>
-        <section class="quemsoueu">
-            <h2>Minha Jornada no Escotismo</h2>
-            <p>Desde que entrei para o movimento escoteiro, vivi experiências que moldaram quem sou hoje. Aprendi sobre
-                <strong>liderança</strong>, <strong>trabalho em equipe</strong>, <strong>respeito à natureza</strong> e
-                <strong>superação de desafios</strong>. Minha trajetória inclui:
-            </p>
-
-            <ul class="homeul">
-                <li>⚜️ <strong>Escoteiro</strong> – Passei por aventuras incríveis, acampamentos e jornadas.</li>
-                <li>⚜️ <strong>Sênior</strong> – Enfrentei desafios maiores e me preparei para a vida.</li>
-                <li>⚜️ <strong>Pioneiro</strong> – Hoje, remo minha propria canoa e ajudo a inspirar novas gerações com
-                    tudo o que aprendi!</li>
-            </ul>
-        </section>
-
-        <section class="quemsoueu">
-            <h2>💻 Minha Paixão por Tecnologia</h2>
-            <p>Atualmente, estudo <strong>Sistemas para Internet</strong>, unindo minha experiência escoteira com
-                inovação. Tenho interesse especial em:</p>
-            <ul class="homeul">
-                <li>🚀 <strong>Desenvolvimento Web</strong> (HTML, CSS, JavaScript)</li>
-                <li>🖥️<strong> Experiências interativas e Realidade Virtual</strong></li>
-                <li>🌍 <strong>Sustentabilidade e tecnologia</strong></li>
-            </ul>
-        </section>
-
-        <section class="quemsoueu">
-            <h2>📌 O Que Você Vai Encontrar Aqui?</h2>
-            <p>Este site é um espaço onde compartilho minha trajetória no escotismo, minhas experiências em tecnologia e
-                projetos que desenvolvo. Navegue pelas <strong><a href="#navbar">seções</a></strong> e descubra mais
-                sobre:</p>
-            <ul class="homeul">
-                <li>📅 <strong>Minha Linha do Tempo Escoteira</strong></li>
-                <li>📸 <strong>Momentos Marcantes</strong></li>
-                <li>🏅 <strong>Conquistas e Insígnias</strong></li>
-            </ul>
-        </section>
-
-        <section class="quemsoueu">
-            <h2>🔗 Conecte-se Comigo!</h2>
-            <p>Quer trocar uma ideia sobre escotismo ou tecnologia? Entre em contato!</p>
-            <ul class="homeul">
-                <li><img src="images/icone-instagram.png" alt="instagram"><a target="_blank"
-                        href="https://www.instagram.com/vinixius_ba/"><strong>/vinixius_ba</strong></a></li>
-                <li><img src="images/icone-github.png" alt="instagram"><a target="_blank"
-                        href="https://github.com/vbmelo-hub"><strong>/vbmelo-hub</strong></a></li>
-                <li><img src="images/icone-linkedin.png" alt="instagram"><a target="_blank"
-                        href="https://www.linkedin.com/in/vinícius-barros-907b61261/"><strong>/vinicius-barros</strong></a>
-                </li>
-            </ul>
-        </section>
-
-        <div class="dropdown">
-            <button class="dropdown-btn">Deixe uma mensagem <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16"> <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg></button>
-            <div class="dropdown-content">
-                <form id="formulario-contato" name="contato" action="/enviar" method="POST">
-                    <h2>Deixe uma mensagem :)</h2>
-                    <!-- Campo de nome -->
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" required>
-        
-                    <!-- Campo de email -->
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-        
-                    <!-- Campo de mensagem -->
-                    <label for="mensagem">Mensagem:</label>
-                    <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-        
-                    <!-- Botão de envio -->
-                    <button id="forms" type="submit">Enviar</button>
-                </form>
+    </div>
+</header>
+<div class="nav-backdrop" data-nav-backdrop aria-hidden="true"></div>
+<main id="conteudo">
+    <section class="hero container">
+        <div class="hero-copy">
+            <p class="eyebrow">MINHA JORNADA NO MOVIMENTO ESCOTEIRO</p>
+            <h1>Vinícius Barros de Melo</h1>
+            <p class="hero-lead">Escotismo, liderança, aventura e tecnologia em uma trajetória construída por experiências que continuam moldando quem eu sou.</p>
+            <div class="hero-tags" aria-label="Temas principais"><span>Escotismo</span><span>Liderança</span><span>Aventura</span><span>Tecnologia</span></div>
+            <div class="hero-actions">
+                <a class="button button-primary" href="linhadotempo.html">Conheça minha trajetória <span aria-hidden="true">→</span></a>
+                <a class="button button-secondary" href="conquistas.html">Ver conquistas</a>
             </div>
         </div>
+        <div class="hero-visual">
+            <div class="portrait-frame">
+                <div class="portrait-orbit" aria-hidden="true"></div>
+                <img src="images/eu.png" width="150" height="150" alt="Vinícius Barros com uniforme escoteiro">
+            </div>
+            <div class="hero-note"><span class="hero-note-dot" aria-hidden="true"></span><div><strong>Ramo Pioneiro</strong><small>Grupo Escoteiro Leôncio de Carvalho • Rio Branco, Acre</small></div></div>
+        </div>
+    </section>
 
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="images/img-carrossel/Escoteiros-do-Brasil.png" class="d-block w-100" alt="...">
-                </div>
+    <section class="section container" aria-labelledby="sobre-titulo">
+        <div class="section-heading">
+            <p class="eyebrow">QUEM SOU EU</p>
+            <h2 id="sobre-titulo">Uma história entre o escotismo e a tecnologia</h2>
+            <p>Sou integrante do Ramo Pioneiro no Grupo Escoteiro Leôncio de Carvalho, em Rio Branco, Acre, e estudante de Sistemas para Internet no IFAC. O Movimento Escoteiro faz parte da minha formação pessoal, enquanto a tecnologia representa uma das áreas em que quero continuar construindo meu futuro.</p>
+        </div>
+        <div class="story-grid">
+            <article class="story-card"><span class="story-number">01</span><h3>Escoteiro</h3><p>Foi onde comecei minha trajetória, vivendo aventuras, acampamentos e aprendendo a importância da vida em equipe.</p></article>
+            <article class="story-card"><span class="story-number">02</span><h3>Sênior</h3><p>Uma etapa de desafios maiores, desenvolvimento de autonomia e preparação para novas responsabilidades.</p></article>
+            <article class="story-card"><span class="story-number">03</span><h3>Pioneiro</h3><p>Hoje, sigo remando minha própria canoa e levando comigo tudo o que aprendi ao longo dos ramos anteriores.</p></article>
+        </div>
+    </section>
 
-                <div class="carousel-item">
-                    <img src="images/img-carrossel/pioneiro.png" class="d-block w-100" alt="...">
-                </div>
+    
+    <div class="scout-group-link">
 
-                <div class="carousel-item">
-                    <img src="images/img-carrossel/Bandeira_do_Acre.png" class="d-block w-100" alt="...">
+    <span>
+        Faço parte do
+        <strong>4º Grupo Escoteiro Leôncio de Carvalho</strong>
+    </span>
+
+    <a
+        href="https://www.instagram.com/4ge.leonciodecarvalho/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram do 4º Grupo Escoteiro Leôncio de Carvalho"
+    >
+        Conheça o grupo no Instagram ↗
+    </a>
+
+    </div>
+
+    <section class="section section-soft">
+        <div class="container">
+            <div class="section-heading section-heading-row">
+                <div><p class="eyebrow">EXPLORE</p><h2>O que você vai encontrar aqui</h2></div>
+                <p>Este site reúne diferentes partes da minha história no Movimento Escoteiro, organizadas para que cada etapa possa ser explorada com calma.</p>
+            </div>
+            <div class="feature-grid">
+                <a class="feature-card" href="linhadotempo.html"><span class="feature-icon" aria-hidden="true">◷</span><div><p class="feature-kicker">TRAJETÓRIA</p><h3>Linha do Tempo</h3><p>Eventos e momentos que marcaram minha caminhada desde a entrada no Movimento Escoteiro.</p></div><span class="feature-arrow" aria-hidden="true">↗</span></a>
+                <a class="feature-card" href="conquistas.html"><span class="feature-icon" aria-hidden="true">◇</span><div><p class="feature-kicker">PROGRESSÃO</p><h3>Conquistas e Insígnias</h3><p>Distintivos, progressões e especialidades conquistadas ao longo da minha trajetória.</p></div><span class="feature-arrow" aria-hidden="true">↗</span></a>
+                <a class="feature-card" href="galeria.html"><span class="feature-icon" aria-hidden="true">▦</span><div><p class="feature-kicker">REGISTROS</p><h3>Galeria</h3><p>Fotografias e lembranças de diferentes momentos vividos no escotismo.</p></div><span class="feature-arrow" aria-hidden="true">↗</span></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section container split-section" aria-labelledby="tech-title">
+        <div class="split-copy">
+            <p class="eyebrow">ALÉM DO ESCOTISMO</p>
+            <h2 id="tech-title">Minha paixão por tecnologia</h2>
+            <p>Estudo Sistemas para Internet e gosto de aproximar aprendizado, criatividade e tecnologia. Entre os assuntos que mais despertam meu interesse estão desenvolvimento web, experiências interativas, realidade virtual e a relação entre sustentabilidade e inovação.</p>
+            <ul class="interest-list"><li><span>01</span>Desenvolvimento Web — HTML, CSS e JavaScript</li><li><span>02</span>Experiências interativas e Realidade Virtual</li><li><span>03</span>Sustentabilidade e tecnologia</li></ul>
+        </div>
+        <div class="identity-panel" aria-label="Elementos da minha identidade escoteira">
+            <div class="identity-card"><img src="images/img-carrossel/Escoteiros-do-Brasil.png" width="300" height="97" alt="Símbolo dos Escoteiros do Brasil" loading="lazy" decoding="async"><span>Movimento Escoteiro</span></div>
+            <div class="identity-card"><img src="images/img-carrossel/pioneiro.png" width="300" height="82" alt="Símbolo do Ramo Pioneiro" loading="lazy" decoding="async"><span>Ramo Pioneiro</span></div>
+            <div class="identity-card"><img src="images/img-carrossel/Bandeira_do_Acre.png" width="300" height="165" alt="Bandeira do Acre" loading="lazy" decoding="async"><span>Rio Branco • Acre</span></div>
+        </div>
+    </section>
+
+    <section class="section section-soft" aria-labelledby="contato-title">
+        <div class="container contact-layout">
+            <div class="contact-copy">
+                <p class="eyebrow">VAMOS CONVERSAR?</p>
+                <h2 id="contato-title">Escotismo, tecnologia ou algum projeto?</h2>
+                <p>Se quiser trocar uma ideia, compartilhar uma experiência ou entrar em contato por algum projeto, pode me enviar uma mensagem.</p>
+                <div class="social-list">
+                    <a href="https://www.instagram.com/vinixius_ba/" target="_blank" rel="noopener noreferrer"><img src="images/icone-instagram.png" width="24" height="24" alt="">Instagram <span>@vinixius_ba</span></a>
+                    <a href="https://github.com/vbmelo-hub" target="_blank" rel="noopener noreferrer"><img src="images/icone-github.png" width="24" height="24" alt="">GitHub <span>@vbmelo-hub</span></a>
+                    <a href="https://www.linkedin.com/in/vb-melo/" target="_blank" rel="noopener noreferrer"><img src="images/icone-linkedin.png" width="24" height="24" alt="">LinkedIn <span>/in/vb-melo</span></a>
                 </div>
             </div>
-
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            <form class="contact-form" id="formulario-contato" action="https://formspree.io/f/mzebgave" method="POST" data-contact-form>
+                <div class="form-field"><label for="nome">Nome</label><input type="text" id="nome" name="nome" autocomplete="name" placeholder="Seu nome" required></div>
+                <div class="form-field"><label for="email">E-mail</label><input type="email" id="email" name="email" autocomplete="email" inputmode="email" placeholder="seuemail@exemplo.com" required></div>
+                <div class="form-field"><label for="mensagem">Mensagem</label><textarea id="mensagem" name="mensagem" rows="6" placeholder="Escreva sua mensagem..." required></textarea></div>
+                <input type="hidden" name="_subject" value="Nova mensagem pelo site Minha Jornada Escoteira">
+                <button class="button button-primary contact-submit" type="submit"><span data-submit-label>Enviar mensagem</span><span aria-hidden="true">→</span></button>
+                <p class="form-status" data-form-status aria-live="polite"></p>
+            </form>
         </div>
-
-    </main>
-
-    <!--Rodapé-->
-    <footer>
-        <p>@2025 Feito com ❤️ por Vinícius Barros de Melo | Sempre Alerta para Servir!</p>
-    </footer>
-
-    <!--Botão de voltar ao topo-->
-    <div class="botao-topo" id="voltarTopo">▲</div>
-
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+    </section>
+</main>
+<footer class="site-footer">
+    <div class="container footer-grid">
+        <div>
+            <a class="footer-brand" href="index.html"><span aria-hidden="true">⚜</span> Vinícius Barros de Melo</a>
+            <p>Minha Jornada no Movimento Escoteiro</p>
+        </div>
+        <nav class="footer-links" aria-label="Redes sociais">
+            <a href="https://www.instagram.com/vinixius_ba/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
+            <a href="https://github.com/vbmelo-hub" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+            <a href="https://www.linkedin.com/in/vb-melo/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+        </nav>
+    </div>
+    <div class="container footer-bottom">
+        <span>© 2026 Vinícius Barros de Melo</span>
+        <span>Sempre Alerta para Servir <span aria-hidden="true">⚜</span></span>
+    </div>
+</footer>
+<button class="back-to-top" id="voltarTopo" type="button" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5l-7 7 1.4 1.4L11 8.8V20h2V8.8l4.6 4.6L19 12z"/></svg>
+</button>
 </body>
-
 </html>

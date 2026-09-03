@@ -1,63 +1,60 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
+<!DOCTYPE html><html lang="pt-BR">
 <head>
-    <!--Caracteres latinos-->
     <meta charset="UTF-8">
-
-    <!--Responsividade-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--Favicon-->
+    <meta name="theme-color" content="#0b1713">
+    <meta name="description" content="Uma página de homenagem a uma referência que ajudou a despertar meu interesse pelo desenvolvimento web.">
+    <meta property="og:title" content="Mestre | Minha Jornada Escoteira">
+    <meta property="og:description" content="Uma página de homenagem a uma referência que ajudou a despertar meu interesse pelo desenvolvimento web.">
+    <meta property="og:type" content="website">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-
-    <!--CSS Externo-->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!--Fonte externa do google fontes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-
-    <title>My life in the scout movement</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script.js" defer></script>
+    <title>Mestre | Minha Jornada Escoteira</title>
 </head>
-
-<body>
-    <!--Nav bar-->
-    <header id="navbar">
-        <h1><img src="images/login-arrow.svg" alt="login-arrow">SEÇÕES</h1>
-        <nav>
-            <svg id="menu-hamburger" onclick="toggleMenu()" width="40" height="40" viewBox="0 0 100 80" fill="#3B70B8">
-                <rect width="100" height="15"></rect>
-                <rect y="30" width="100" height="15"></rect>
-                <rect y="60" width="100" height="15"></rect>
-            </svg>
-            <ul class="menu">
-                <li><a class="linknavbar" href="index.html">HOME</a></li>
-                <li><a class="linknavbar" href="linhadotempo.html">LINHA DO TEMPO</a></li>
-                <li><a class="linknavbar" href="conquistas.html">CONQUISTAS E INSÍGNIAS</a></li>
-                <li><a class="linknavbar" href="galeria.html">GALERIA</a></li>
-                <li><a class="linknavbar" href="guanabara.html">MESTRE</a></li>
-            </ul>
+<body data-page="master"><a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header" id="navbar">
+    <div class="nav-shell container">
+        <a class="brand" href="index.html" aria-label="Minha Jornada Escoteira — página inicial">
+            <span class="brand-mark" aria-hidden="true">⚜</span>
+            <span class="brand-copy"><strong>Minha Jornada</strong><small>Movimento Escoteiro</small></span>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-navigation">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" id="primary-navigation" aria-label="Navegação principal">
+            <div class="drawer-head">
+                <span class="drawer-title">Navegação</span>
+                <button class="drawer-close" type="button" aria-label="Fechar menu">×</button>
+            </div>
+            <ul><li><a class="nav-link" href="index.html">Home</a></li><li><a class="nav-link" href="linhadotempo.html">Linha do Tempo</a></li><li><a class="nav-link" href="conquistas.html">Conquistas</a></li><li><a class="nav-link" href="galeria.html">Galeria</a></li><li><a class="nav-link" href="guanabara.html" aria-current="page">Mestre</a></li></ul>
         </nav>
-    </header>
-
-        <div class="video-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Ejkb_YpuHWs?si=Ifcazofz4vKAPlov" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</header>
+<div class="nav-backdrop" data-nav-backdrop aria-hidden="true"></div>
+<main id="conteudo">
+    <section class="page-hero container"><p class="eyebrow">REFERÊNCIA E APRENDIZADO</p><h1>Mestre</h1><p>Uma homenagem a quem ajudou a despertar meu interesse pelo desenvolvimento web.</p></section>
+    <section class="video-section container"><div class="video-card"><div class="video-copy"><span class="video-label">VÍDEO EM DESTAQUE</span><h2>Aprender também é reconhecer quem inspira a caminhada.</h2><p>Este espaço permanece como parte da história original do projeto e da minha formação em tecnologia.</p></div><div class="video-container"><iframe src="https://www.youtube.com/embed/Ejkb_YpuHWs?si=Ifcazofz4vKAPlov" title="Vídeo em destaque" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div></div></section>
+</main><footer class="site-footer">
+    <div class="container footer-grid">
+        <div>
+            <a class="footer-brand" href="index.html"><span aria-hidden="true">⚜</span> Vinícius Barros de Melo</a>
+            <p>Minha Jornada no Movimento Escoteiro</p>
         </div>
-
-    <!--Rodapé-->
-    <footer>
-        <p>@2025 Feito com ❤️ por Vinícius Barros de Melo | Sempre Alerta para Servir!</p>
-    </footer>
-
-    <!--Botão de voltar ao topo-->
-    <div class="botao-topo" id="voltarTopo">▲</div>
-
-    <script src="script.js"></script>
-</body>
-
-</html>
+        <nav class="footer-links" aria-label="Redes sociais">
+            <a href="https://www.instagram.com/vinixius_ba/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
+            <a href="https://github.com/vbmelo-hub" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+            <a href="https://www.linkedin.com/in/vb-melo/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+        </nav>
+    </div>
+    <div class="container footer-bottom">
+        <span>© 2026 Vinícius Barros de Melo</span>
+        <span>Sempre Alerta para Servir <span aria-hidden="true">⚜</span></span>
+    </div>
+</footer>
+<button class="back-to-top" id="voltarTopo" type="button" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5l-7 7 1.4 1.4L11 8.8V20h2V8.8l4.6 4.6L19 12z"/></svg>
+</button></body></html>

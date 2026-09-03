@@ -1,179 +1,65 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <!--Caracteres latinos-->
-    <meta charset="UTF-8">
-
-    <!--Responsividade-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <!--Favicon-->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-
-    <!--CSS Externo-->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!--Fonte externa do google fontes-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <title>Linha do tempo</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#0b1713" name="theme-color"/>
+<meta content="Linha do tempo com momentos da trajetória de Vinícius Barros de Melo no Movimento Escoteiro." name="description"/>
+<meta content="Linha do Tempo | Minha Jornada Escoteira" property="og:title"/>
+<meta content="Linha do tempo com momentos da trajetória de Vinícius Barros de Melo no Movimento Escoteiro." property="og:description"/>
+<meta content="website" property="og:type"/>
+<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+<script defer="" src="script.js"></script>
+<title>Linha do Tempo | Minha Jornada Escoteira</title>
 </head>
-
-<body>
-    <!--Nav bar-->
-    <header id="navbar">
-        <h1><img src="images/login-arrow.svg" alt="login-arrow">SEÇÕES</h1>
-        <nav>
-            <svg id="menu-hamburger" onclick="toggleMenu()" width="40" height="40" viewBox="0 0 100 80" fill="#3B70B8">
-                <rect width="100" height="15"></rect>
-                <rect y="30" width="100" height="15"></rect>
-                <rect y="60" width="100" height="15"></rect>
-            </svg>
-            <ul class="menu">
-                <li><a class="linknavbar" href="index.html">HOME</a></li>
-                <li><a class="linknavbar" href="linhadotempo.html">LINHA DO TEMPO</a></li>
-                <li><a class="linknavbar" href="conquistas.html">CONQUISTAS E INSÍGNIAS</a></li>
-                <li><a class="linknavbar" href="galeria.html">GALERIA</a></li>
-                <li><a class="linknavbar" href="guanabara.html">MESTRE</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <!--Inicio do conteudo da pagina-->
-        <h1 style="color: white;">Minha História no Escotismo</h1>
-        <section id="linha-do-tempo">
-            <p style="color: white;">Seja bem vindo a minha trajetória no movimento escoteiro! <br> (incompleto)</p>
-            <div class="timeline">
-                <div class="event">
-                    <h3>2018 - Entrada no ramo Escoteiro</h3>
-                    <p>Minha primeira experiência no movimento escoteiro, como descrever?</p>
-                </div>
-                <div class="event">
-                    <h3>03/08/2018 - Promessa Escoteira</h3>
-                    <p>A promessa escoteira é o dia mais importante na vida escoteira de um jovem que acabou de entrar
-                        no movimento, pois nesse momento, é feita uma promessa para consigo mesmo de tornar esse mundo
-                        um pouco melhor do que o encontramos... - B.P</p>
-                </div>
-                <div class="event">
-                    <h3>01/09/2018 - Primeira atividade de acampamento</h3>
-                    <p>Uma aventura inesquecível com minha patrulha Águia!</p>
-                </div>
-                <div class="event">
-                    <h3>15/09/2018 - Visita ao lar dos vicentinos</h3>
-                    <p>Nesse dia o meu grupo escoteiro foi realiazer doações para o Lar dos vicentinos e pude ter a
-                        oportunidade juntamente com minha patrulha de conversar com os carinhosos idosos da casa :)</p>
-                </div>
-                <div class="event">
-                    <h3>19/09/2018 - Oficina de primeiros socorros no Colégio João Calvino</h3>
-                    <p>Nesse dia pude ensinar técnicas de primeiros socorros aos jovens da minha escola junto do meu
-                        grupo escoteiro.</p>
-                </div>
-                <div class="event">
-                    <h3>07/04/2024 - Orientação de primeiros socorros</h3>
-                    <p>Chefe Lucas e Chefe Artea instruíram o clã Pioneiro em técnicas avançadas de socorrismo</p>
-                </div>
-                <div class="event">
-                    <h3>13/04/2024 - Encontro da familia escoteira</h3>
-                    <p></p>
-                </div>
-                <div class="event">
-                    <h3>20/04/2024 - Curso de primeiros socrros para os jovens do grupo</h3>
-                    <p></p>
-                </div>
-                <div class="event">
-                    <h3>11/05/2024 - Educação Escoteira 2024</h3>
-                    <p></p>
-                </div>
-                <div class="event">
-                    <h3>18/05/2024 - Clã Pioneiro distribuindo comida na UPA do 2º distrito</h3>
-                    <p></p>
-                </div>
-                <div class="event">
-                    <h3>25/05/2024 - Grande jogo áreo 2024</h3>
-                    <p></p>
-                </div>
-                <div class="event">
-                    <h3>05/06/2024 - Dia mundial do meio ambiente</h3>
-                    <p></p>
-                </div>
-                <div class="event">
-                    <h3>08/06/2024 - Mutirão nacional de doação de sangue</h3>
-                    <p></p>
-                </div>
-                <div class="event">
-                    <h3>15/06/2024 - 2º Olímpieda escoteira</h3>
-                    <p></p>
-                </div>
-                <div class="event">
-                    <h3>22/06/2024 - 33º Mutirão nacional de ação ecológica (MUTECO)</h3>
-                    <p></p>
-                </div>
-                <div class="event">
-                    <h3>28/06/2024 - Acampamento-Autosuficiente</h3>
-                    <p></p>
-                </div>
-                <div class="event">
-                    <h3>13/07/2024 - Pré-Vigília Pioneira</h3>
-                    <p></p>
-                </div>
-                <div class="event">
-                    <h3>20/07/2024 - Amigo caipira</h3>
-                    <p></p>
-                </div>
-                <div class="event">
-                    <h3>31/08/2024 - Escoteiros na ExpoAcre!</h3>
-                    <p></p>
-                </div>
-                <div class="event">
-                    <h3>07/09/2024 - Desfile Civico 2024</h3>
-                    <p></p>
-                </div>
-                <div class="event">
-                    <h3>14/09/2024 - Acampamento do Wilfried</h3>
-                    <p></p>
-                </div>
-                <div class="event">
-                    <h3>21/09/2024 - Construção da caverna do Clã Pioneiro</h3>
-                    <p></p>
-                </div>
-                <div class="event">
-                    <h3>28/09/2024 - Dia mundial da limpeza 2024</h3>
-                    <p></p>
-                </div>
-                <div class="event">
-                    <h3>05/10/2024 - Travessia Pioneira</h3>
-                    <p></p>
-                </div>
-                <div class="event">
-                    <h3>18/10/2024 - JOTA/JOTI 2024</h3>
-                    <p></p>
-                </div>
-                <div class="event">
-                    <h3>14/12/2024 - Confraternização de Grupo e Encerramento das atividades 2024</h3>
-                    <p></p>
-                </div>
-                <!--Mais eventos em breve-->
-            </div>
-        </section>
-    </main>
-
-    <!--Rodapé-->
-    <footer>
-        <p>@2025 Feito com ❤️ por Vinícius Barros de Melo | Sempre Alerta para Servir!</p>
-    </footer>
-
-    <!--Botão de voltar ao topo-->
-    <div class="botao-topo" id="voltarTopo">▲</div>
-    <script src="script.js"></script>
-</body>
-
-</html>
+<body data-page="timeline"><a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header" id="navbar">
+<div class="nav-shell container">
+<a aria-label="Minha Jornada Escoteira — página inicial" class="brand" href="index.html">
+<span aria-hidden="true" class="brand-mark">⚜</span>
+<span class="brand-copy"><strong>Minha Jornada</strong><small>Movimento Escoteiro</small></span>
+</a>
+<button aria-controls="primary-navigation" aria-expanded="false" aria-label="Abrir menu" class="nav-toggle" type="button">
+<span></span><span></span><span></span>
+</button>
+<nav aria-label="Navegação principal" class="site-nav" id="primary-navigation">
+<div class="drawer-head">
+<span class="drawer-title">Navegação</span>
+<button aria-label="Fechar menu" class="drawer-close" type="button">×</button>
+</div>
+<ul><li><a class="nav-link" href="index.html">Home</a></li><li><a aria-current="page" class="nav-link" href="linhadotempo.html">Linha do Tempo</a></li><li><a class="nav-link" href="conquistas.html">Conquistas</a></li><li><a class="nav-link" href="galeria.html">Galeria</a></li><li><a class="nav-link" href="guanabara.html">Mestre</a></li></ul>
+</nav>
+</div>
+</header>
+<div aria-hidden="true" class="nav-backdrop" data-nav-backdrop=""></div>
+<main id="conteudo">
+<section class="page-hero container">
+<p class="eyebrow">MINHA HISTÓRIA NO ESCOTISMO</p>
+<h1>Linha do Tempo</h1>
+<p>Registros selecionados da minha trajetória no Movimento Escoteiro, atualizados a partir da Ficha Individual (120/121) até agosto de 2026.</p>
+<p class="source-note">A linha do tempo prioriza marcos, progressões, ações comunitárias, acampamentos, formações e atividades de destaque registradas oficialmente.</p>
+</section>
+<section aria-label="Linha do tempo da trajetória escoteira" class="timeline-section container"><div class="timeline"><div class="timeline-year"><span>2018</span></div><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>09/06/2018</time><h2>Mutirão Ecológico Escoteiro 2018</h2><p>Atividade realizada em Rio Branco/AC.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>03/08/2018</time><h2>Promessa Escoteira</h2><p>Registro da Promessa Escoteira na Ficha Individual.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>25/08/2018 – 26/08/2018</time><h2>Acampamento da Tropa Escoteira</h2><p>Acampamento realizado na Fazenda São Raimundo, Quixadá.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>15/09/2018</time><h2>Mutirão Comunitário — MutCom 2018</h2><p>Participação no Mutirão Comunitário em Rio Branco/AC.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>20/10/2018 – 21/10/2018</time><h2>Scouti JOTI Challenge 2018</h2><p>Atividade realizada no campus da Universidade Federal do Acre.</p></div></article><div class="timeline-year"><span>2019</span></div><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>30/03/2019</time><h2>Hora do Planeta 2019</h2><p>Participação em ações de plantio, semeadura e atividade no centro de Rio Branco.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>08/05/2019</time><h2>Progressão — Trilha</h2><p>Registro da etapa Trilha na progressão do Ramo Escoteiro.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>08/06/2019</time><h2>Progressão — Travessia</h2><p>Registro da etapa Travessia; no mesmo dia também houve atividade de limpeza no Lago do Amor.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>21/06/2019</time><h2>Cordão Verde e Amarelo</h2><p>Conquista registrada na Ficha Individual.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>20/07/2019</time><h2>Distintivo do Aprender — Ramo Escoteiro</h2><p>Conquista registrada na Ficha Individual.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>31/08/2019 – 01/09/2019</time><h2>28º ELO Nacional</h2><p>Participação no evento realizado em Rio Branco/AC.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>10/09/2019</time><h2>Cordão Vermelho e Branco</h2><p>Conquista registrada na Ficha Individual.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>18/10/2019 – 20/10/2019</time><h2>JOTI 2019 — Tropa Sênior</h2><p>Atividade realizada na Escola Presbiteriana João Calvino.</p></div></article><div class="timeline-year"><span>2020</span></div><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>07/03/2020</time><h2>Progressão — Escalada</h2><p>Registro da etapa Escalada na progressão do Ramo Sênior.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>28/03/2020</time><h2>Hora do Planeta 2020</h2><p>Participação na edição de 2020 em formato adaptado ao período de atividades em casa.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>23/07/2020 – 01/08/2020</time><h2>Campanha de doação de sangue e medula óssea</h2><p>Ações registradas junto ao Hemoacre.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>27/07/2020 – 01/08/2020</time><h2>Semana Escoteira</h2><p>Atividade registrada em formato online.</p></div></article><div class="timeline-year"><span>2021</span></div><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>28/08/2021 – 29/08/2021</time><h2>Fogo de Conselho Sênior</h2><p>Atividade do Ramo Sênior registrada em Rio Branco.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>18/09/2021</time><h2>Dia Mundial da Limpeza</h2><p>Participação na atividade 'Limpeza Espiritual', na Usina de Arte João Donato.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>25/09/2021</time><h2>MutCom</h2><p>Atividade 'Amigo de todos e irmão dos demais escoteiros', realizada no Horto Florestal.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>18/12/2021</time><h2>Comemoração dos 20 anos do Grupo</h2><p>Confraternização registrada no Horto Florestal.</p></div></article><div class="timeline-year"><span>2022</span></div><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>20/08/2022</time><h2>Grande Jogo Naval — Navegação Ribeirinha</h2><p>Atividade realizada em Rio Branco, na UFAC.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>28/08/2022</time><h2>Renovação da Promessa — Ramo Sênior</h2><p>Renovação da Promessa registrada na Ficha Individual.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>03/09/2022</time><h2>Elogio de Grupo</h2><p>Reconhecimento pelo comportamento e pela condução de ajuda e socorro humanitário durante uma tempestade em atividade de acampamento.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>01/09/2022 – 01/10/2022</time><h2>Projeto Amigo de 4 Patas</h2><p>Projeto registrado em Rio Branco/AC.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>19/10/2022</time><h2>Novas especialidades</h2><p>Registro de RPG, Culinária, Fogo de Conselho, Pioneiria e Técnicas de Sapa.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>28/10/2022</time><h2>Especialidades de saúde</h2><p>Registro das especialidades Primeiros Socorros e Cuidados Bucais, ambas em nível 3.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>10/12/2022</time><h2>Estrela de Atividades — 4 anos</h2><p>Certificado por completar quatro anos de boas atividades no Movimento Escoteiro, sendo dois anos no Ramo Escoteiro e dois no Ramo Sênior.</p></div></article><div class="timeline-year"><span>2023</span></div><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>23/03/2023 – 02/04/2023</time><h2>Ajuda Humanitária na Alagação</h2><p>Atuação registrada em vários pontos da cidade durante o período de alagação.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>29/07/2023 – 06/08/2023</time><h2>Trilha Ecológica na Expoacre</h2><p>Participação na atividade realizada no Parque de Exposições Wildy Viana.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>12/08/2023</time><h2>Passagem — Pioneiro investido</h2><p>Registro da passagem para o Ramo Pioneiro na Ficha Individual.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>19/08/2023</time><h2>Insígnia do Comprometimento</h2><p>Conquista registrada na Ficha Individual.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>26/08/2023</time><h2>Renovação da Promessa — Ramo Pioneiro</h2><p>Renovação da Promessa registrada após a passagem para o Ramo Pioneiro.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>30/09/2023</time><h2>Elogio Regional — Trilha Ecológica Suspensa</h2><p>Reconhecimento pelo apoio, dedicação, realização e monitoramento da Trilha Ecológica Suspensa da Expoacre 2023.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>09/12/2023 – 10/12/2023</time><h2>2ª Vigília Pioneira</h2><p>Atividade 'Jovens, Agentes de Transformação', realizada na sede da UFAC.</p></div></article><div class="timeline-year"><span>2024</span></div><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>06/04/2024</time><h2>1º Treinamento de Primeiros Socorros — COMAD/Clã</h2><p>Treinamento realizado na sede da UFAC.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>18/05/2024</time><h2>Educação Escoteira</h2><p>Atividade de Educação Escoteira registrada em Rio Branco/AC.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>08/06/2024</time><h2>Mutirão Nacional Escoteiro de Ação Ecológica</h2><p>Participação no MUTECO 2024 em Rio Branco/AC.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>14/06/2024</time><h2>Doando Vida e Arraial do Doador de Sangue</h2><p>Ações registradas em Rio Branco e no estacionamento do Hemoacre.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>15/06/2024</time><h2>II Olimpíada Escoteira</h2><p>Atividade realizada no Centro de Antropologia da UFAC.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>06/07/2024 – 07/07/2024</time><h2>Acampamento do Clã</h2><p>Acampamento registrado na BR-364, em ramal em frente à Vila Santa Cecília.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>05/09/2024 – 08/09/2024</time><h2>Trilha Escoteira na Expoacre</h2><p>Participação na montagem e no apoio da atividade no Parque de Exposições.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>12/10/2024 – 13/10/2024</time><h2>Travessia Pioneira</h2><p>Atividade realizada na Reserva Ambiental APA Lago do Amapá.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>14/10/2024</time><h2>Insígnia Cidadania</h2><p>Conquista registrada na Ficha Individual.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>18/10/2024 – 20/10/2024</time><h2>JOTA/JOTI Pioneiros</h2><p>Atividade do Clã Pioneiro registrada em Rio Branco.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>16/11/2024 – 17/11/2024</time><h2>3ª Pré-vigília Pioneira</h2><p>Atividade 'Quem sou e para onde vou', realizada na sede da UFAC.</p></div></article><div class="timeline-year"><span>2025</span></div><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>22/03/2025</time><h2>Estrela de Atividade — 5 anos</h2><p>Certificado por completar cinco anos de boas atividades no Movimento Escoteiro, acompanhado de estrela de um ano do Ramo Pioneiro.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>17/05/2025</time><h2>Educação Escoteira 2025 — Staff</h2><p>Participação como staff na programação realizada na Escola Estadual Senador Adalberto Sena.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>14/06/2025</time><h2>MutEco — Jogo das mudanças climáticas</h2><p>Atividade com os Ramos Sênior e Pioneiro na sede da UFAC.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>09/08/2025</time><h2>1º Fórum de Jovens do Grupo</h2><p>Fórum realizado na sede da UFAC, no Centro de Antropologia.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>30/08/2025 – 31/08/2025</time><h2>Camporee de Chefes Regional</h2><p>Atividade realizada no IFAC Campus Transacreana.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>20/09/2025</time><h2>Mutirão Nacional Escoteiro de Ação Comunitária</h2><p>Atividade realizada em Rio Branco/UFAC; na mesma data, o Clã trabalhou na construção do Caderno de Tradições.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>11/10/2025 – 12/10/2025</time><h2>AcampaClã 2025</h2><p>Acampamento do Clã realizado na região do Santa Cecília, em Rio Branco.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>17/10/2025 – 19/10/2025</time><h2>JOTI Clã 2025</h2><p>Atividade registrada em Rio Branco.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>22/11/2025 – 23/11/2025</time><h2>ELO Regional 2025</h2><p>Evento realizado no IFAC Campus Transacreana.</p></div></article><div class="timeline-year"><span>2026</span></div><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>14/03/2026 – 15/03/2026</time><h2>Congresso Escoteiro Regional Acre 2026</h2><p>Evento realizado no Instituto Federal do Acre — IFAC.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>21/03/2026</time><h2>Assembleia do Clã — Março</h2><p>Assembleia realizada na UFAC.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>29/03/2026</time><h2>Reunião da COMAD — Março</h2><p>Reunião da COMAD registrada em Rio Branco.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>11/04/2026</time><h2>Treinamento de técnicas escoteiras</h2><p>Treinamento do Clã com nós, amarras e abrigos, no Centro de Antropologia da UFAC.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>25/04/2026</time><h2>Trilha Regional Acre 2026</h2><p>Participação na Trilha Regional Acre 2026, em Rio Branco.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>25/04/2026</time><h2>Vigília e Investidura Pioneira</h2><p>Atividade registrada para Emanuelle, Giovanna e Vinícius, no Centro de Antropologia da UFAC.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>02/05/2026</time><h2>Capacitação em primeiros socorros em saúde mental</h2><p>Capacitação do Clã realizada no Centro de Antropologia da UFAC.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>17/05/2026 – 06/06/2026</time><h2>Curso Preliminar EAD</h2><p>Formação registrada em modalidade EAD.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>23/05/2026 – 24/05/2026</time><h2>Acampamento do Clã — Memórias</h2><p>Acampamento do Clã registrado na Ficha Individual.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>20/06/2026</time><h2>MUTECO — parceria com a SEMA</h2><p>Atividade realizada no Horto Florestal.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>18/07/2026 – 19/07/2026</time><h2>Acampamento Especial — 25 anos do 4º GE</h2><p>Acampamento especial realizado na Chácara G2.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>08/08/2026</time><h2>Assembleia do Clã — 2º Ciclo</h2><p>Assembleia realizada na sede escoteira da UFAC.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>12/08/2026</time><h2>Conselho de Chefes</h2><p>Conselho registrado na sede escoteira da UFAC.</p></div></article><article class="timeline-item" data-timeline-item=""><div aria-hidden="true" class="timeline-marker"></div><div class="timeline-card"><time>22/08/2026</time><h2>Fogo de Conselho Regional Acre 2026</h2><p>Atividade realizada no Campus Rio Branco da UFAC; na mesma data também houve o Dia do Amigo do Clã Pioneiro.</p></div></article></div></section></main><footer class="site-footer">
+<div class="container footer-grid">
+<div>
+<a class="footer-brand" href="index.html"><span aria-hidden="true">⚜</span> Vinícius Barros de Melo</a>
+<p>Minha Jornada no Movimento Escoteiro</p>
+</div>
+<nav aria-label="Redes sociais" class="footer-links">
+<a href="https://www.instagram.com/vinixius_ba/" rel="noopener noreferrer" target="_blank">Instagram <span aria-hidden="true">↗</span></a>
+<a href="https://github.com/vbmelo-hub" rel="noopener noreferrer" target="_blank">GitHub <span aria-hidden="true">↗</span></a>
+<a href="https://www.linkedin.com/in/vb-melo/" rel="noopener noreferrer" target="_blank">LinkedIn <span aria-hidden="true">↗</span></a>
+</nav>
+</div>
+<div class="container footer-bottom">
+<span>© 2026 Vinícius Barros de Melo</span>
+<span>Sempre Alerta para Servir <span aria-hidden="true">⚜</span></span>
+</div>
+</footer>
+<button aria-label="Voltar ao topo" class="back-to-top" id="voltarTopo" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 5l-7 7 1.4 1.4L11 8.8V20h2V8.8l4.6 4.6L19 12z"></path></svg>
+</button></body></html>
